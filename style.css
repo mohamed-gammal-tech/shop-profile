@@ -1,0 +1,105 @@
+/* Basic Reset */
+body, h1, h2, h3, p { margin: 0; padding: 0; }
+  
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+  gap: 30px;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+  margin: 60px;
+}
+.profile-details p{
+  text-align: start;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.profile-details {
+  text-align: right;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+ 
+}
+
+.product {
+  width: 23%; /* 4 products in a row */
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; 
+  margin-bottom: 10px;
+}
+
+.product img:hover {
+  transform: scale(1.1); 
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product {
+    width: 48%; /* 2 products in a row */
+  }
+
+  .container {
+    width: 90%; /* Slightly wider container for tablets */
+  }
+}
+
+/* Mobile Phones (devices with widths less than 768px) */
+@media (max-width: 767px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-details {
+    text-align: center;
+  }
+
+  .products {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%; /* Full width for each product */
+    margin-bottom: 20px; /* Keep some space between the products */
+  }
+
+  .container {
+    width: 95%; /* Use more screen width on smaller devices */
+  }
+}
